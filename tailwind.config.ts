@@ -57,6 +57,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom colors
+        night: {
+          DEFAULT: "hsl(var(--night-bg))",
+          foreground: "hsl(var(--night-fg))",
+        },
+        book: {
+          DEFAULT: "hsl(var(--book-gold))",
+        },
+        dream: {
+          DEFAULT: "hsl(var(--dream-blue))",
+        },
+        coin: {
+          DEFAULT: "hsl(var(--coin-gold))",
+          shadow: "hsl(var(--coin-shadow))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
