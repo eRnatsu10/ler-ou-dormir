@@ -11,7 +11,7 @@ const Index = () => {
             📚 Ler ou Dormir? 🌙
           </h1>
           <p className="text-xl text-night-foreground/80 max-w-2xl mx-auto">
-            Deixe a sorte decidir se você deve ler mais um capítulo ou ir descansar. 
+            Deixa a sorte decidir se deves ler mais um capítulo ou ir descansar. 
             A moeda da sabedoria está aqui para te ajudar!
           </p>
         </div>
@@ -26,7 +26,7 @@ const Index = () => {
         {/* Footer */}
         <div className="text-center mt-12">
           <p className="text-night-foreground/60 text-sm">
-            ✨ Que a sorte guie suas escolhas literárias ✨
+            ✨ Que a sorte guie as tuas escolhas literárias ✨
           </p>
         </div>
       </div>
