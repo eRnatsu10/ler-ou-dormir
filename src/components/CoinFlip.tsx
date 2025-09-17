@@ -38,31 +38,28 @@ export const CoinFlip = ({ onResult }: CoinFlipProps) => {
     setIsFlipping(false);
   };
 
+  const coinIsBack = result === "sleep";
+
   return (
     <div className="flex flex-col items-center space-y-8">
       {/* Coin */}
       <div className="relative">
-        <div 
-          className={`relative w-48 h-48 cursor-pointer transition-transform duration-300 hover:scale-105 ${
-            isFlipping ? "flip-animation" : ""
-          }`}
+        <div
+          className={`coin relative w-48 h-48 cursor-pointer hover:scale-105 transition-transform duration-700 ${
+            coinIsBack ? "coin--back" : ""
+          } ${isFlipping ? "coin--flip" : ""}`}
           onClick={flipCoin}
-          style={{ transformStyle: "preserve-3d" }}
         >
           {/* Front face - Read */}
-          <Card className={`coin-face absolute inset-0 rounded-full flex flex-col items-center justify-center gradient-coin border-4 border-coin-shadow shadow-2xl ${
-            result === "sleep" ? "coin-back" : ""
-          }`}>
+          <Card className="coin-face absolute inset-0 rounded-full flex flex-col items-center justify-center gradient-coin border-4 border-coin-shadow shadow-2xl">
             <BookOpen className="w-16 h-16 text-night-foreground mb-2" />
             <p className="text-night-foreground font-bold text-lg text-center px-4">
               Ler mais um capítulo
             </p>
           </Card>
-          
+
           {/* Back face - Sleep */}
-          <Card className={`coin-face absolute inset-0 rounded-full flex flex-col items-center justify-center bg-secondary border-4 border-secondary shadow-2xl coin-back ${
-            result === "read" ? "coin-back" : ""
-          }`}>
+          <Card className="coin-face coin-face--back absolute inset-0 rounded-full flex flex-col items-center justify-center bg-secondary border-4 border-secondary shadow-2xl">
             <Moon className="w-16 h-16 text-secondary-foreground mb-2" />
             <p className="text-secondary-foreground font-bold text-lg text-center px-4">
               É melhor ir dormir
@@ -87,10 +84,9 @@ export const CoinFlip = ({ onResult }: CoinFlipProps) => {
               <h3 className="text-xl font-semibold">A moeda decidiu!</h3>
             </div>
             <p className="text-lg text-muted-foreground">
-              {result === "read" 
-                ? "🎭 Mais uma aventura te espera entre as páginas!" 
-                : "🌙 Hora de descansar e sonhar com novas histórias!"
-              }
+              {result === "read"
+                ? "🎭 Mais uma aventura te espera entre as páginas!"
+                : "🌙 Hora de descansar e sonhar com novas histórias!"}
             </p>
           </div>
         </Card>
