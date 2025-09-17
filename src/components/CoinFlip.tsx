@@ -85,8 +85,8 @@ export const CoinFlip = ({ onResult }: CoinFlipProps) => {
             </div>
             <p className="text-lg text-muted-foreground">
               {result === "read"
-                ? "🎭 Mais uma aventura te espera entre as páginas!"
-                : "🌙 Hora de descansar e sonhar com novas histórias!"}
+                ? "🎭 Mais uma aventura aguarda entre as páginas!"
+                : "🌙 Hora de descansar e sonhares com novas histórias!"}
             </p>
           </div>
         </Card>
@@ -117,7 +117,7 @@ export const CoinFlip = ({ onResult }: CoinFlipProps) => {
       {/* Instructions */}
       {!showResult && !isFlipping && (
         <p className="text-muted-foreground text-center max-w-md">
-          Clique na moeda ou no botão para descobrir se você deve ler mais um capítulo ou ir dormir! 📚✨
+          Clica na moeda ou no botão para descobrir se deves ler mais um capítulo ou ir dormir! 📚✨
         </p>
       )}
     </div>
