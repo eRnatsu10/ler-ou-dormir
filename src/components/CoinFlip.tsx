@@ -53,8 +53,8 @@ export const CoinFlip = ({ onResult }: CoinFlipProps) => {
           <Card className={`coin-face absolute inset-0 rounded-full flex flex-col items-center justify-center gradient-coin border-4 border-coin-shadow shadow-2xl ${
             result === "sleep" ? "coin-back" : ""
           }`}>
-            <BookOpen className="w-16 h-16 text-night mb-2" />
-            <p className="text-night font-bold text-lg text-center px-4">
+            <BookOpen className="w-16 h-16 text-night-foreground mb-2" />
+            <p className="text-night-foreground font-bold text-lg text-center px-4">
               Ler mais um capítulo
             </p>
           </Card>
