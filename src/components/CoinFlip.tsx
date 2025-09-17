@@ -50,7 +50,7 @@ export const CoinFlip = ({ onResult }: CoinFlipProps) => {
           style={{ transformStyle: "preserve-3d" }}
         >
           {/* Front face - Read */}
-          <Card className={`coin-face absolute inset-0 flex flex-col items-center justify-center gradient-coin border-4 border-coin-shadow shadow-2xl ${
+          <Card className={`coin-face absolute inset-0 rounded-full flex flex-col items-center justify-center gradient-coin border-4 border-coin-shadow shadow-2xl ${
             result === "sleep" ? "coin-back" : ""
           }`}>
             <BookOpen className="w-16 h-16 text-night mb-2" />
@@ -60,8 +60,8 @@ export const CoinFlip = ({ onResult }: CoinFlipProps) => {
           </Card>
           
           {/* Back face - Sleep */}
-          <Card className={`coin-face absolute inset-0 flex flex-col items-center justify-center bg-secondary border-4 border-secondary shadow-2xl coin-back ${
-            result === "sleep" ? "" : "coin-back"
+          <Card className={`coin-face absolute inset-0 rounded-full flex flex-col items-center justify-center bg-secondary border-4 border-secondary shadow-2xl coin-back ${
+            result === "read" ? "coin-back" : ""
           }`}>
             <Moon className="w-16 h-16 text-secondary-foreground mb-2" />
             <p className="text-secondary-foreground font-bold text-lg text-center px-4">
